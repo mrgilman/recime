@@ -16,13 +16,16 @@ ActiveRecord::Schema.define(:version => 20120503181525) do
   create_table "ingredients", :force => true do |t|
     t.text     "name"
     t.text     "amount"
+    t.integer  "recipe_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "recipes", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
 end

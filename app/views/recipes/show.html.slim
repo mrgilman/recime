@@ -1,0 +1,7 @@
+h3
+  = @recipe.name
+
+
+- @recipe.ingredients.each do |ingredient|
+  | #{ingredient.amount} #{ingredient.name}
+  br
