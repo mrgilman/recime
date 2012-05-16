@@ -1,7 +1,15 @@
 h3
   = @recipe.name
 
-
+= @recipe.description
+br
 - @recipe.ingredients.each do |ingredient|
   | #{ingredient.amount} #{ingredient.name}
   br
+br
+= @recipe.instructions
+br
+br
+= link_to "Edit", edit_recipe_path(@recipe)
+br
+= link_to "Delete", recipe_path(@recipe), method: :delete

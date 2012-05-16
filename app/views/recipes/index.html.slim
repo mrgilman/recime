@@ -2,3 +2,7 @@ h3 My Recipes
 
 - @recipes.each do |recipe|
   = link_to recipe.name, recipe_path(recipe)
+  br
+br
+br
+= link_to "Add a recipe", new_recipe_path
