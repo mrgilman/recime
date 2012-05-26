@@ -28,11 +28,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Recime</a>
+          <a class="brand" href="#">ReciMe</a>
           <div class="container-fluid nav-collapse">
             <ul class="nav">
               <% if current_user %>
-                <li>Logged in as <%=current_user.email %></li>
+                <li><%= link_to current_user.username, recipes_path %></li>
                 <li><%= link_to "Log out", log_out_path %></li>
               <% else %>
                 <li><%= link_to "Sign up", sign_up_path %></li>

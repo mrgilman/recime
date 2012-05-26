@@ -1,14 +1,27 @@
-= nested_form_for @recipe do |f|
-  = f.label :name
+= nested_form_for @recipe, :html => {:multipart => true} do |f|
+  = f.label(:name, "Recipe name")
   = f.text_field :name
   br
   = f.label :description
-  = f.text_field :description
+  = f.text_area :description
+  br
+  | Ingredients
   br
   = f.fields_for :ingredients
   = f.link_to_add "Add an ingredient", :ingredients
   br
-  = f.label :instructions
-  = f.text_field :instructions
   br
+  = f.label :instructions
+  = f.text_area :instructions
+  br
+  = f.label :prep_time
+  = f.text_field :prep_time
+  br
+  = f.label :cook_time
+  = f.text_field :cook_time
+  br
+  = f.label :servings
+  = f.text_field :servings
+  br
+  = f.file_field :image
   = f.submit

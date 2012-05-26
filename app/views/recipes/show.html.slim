@@ -1,16 +1,18 @@
-h3
-  = @recipe.name
+div class='span6'
+  h3
+    = @recipe.name
 
-= @recipe.description
-br
-br
-- @recipe.ingredients.each do |ingredient|
-  | #{ingredient.amount} #{ingredient.name}
+  = @recipe.description
   br
-br
-= @recipe.instructions
-br
-br
-= link_to "Edit", edit_recipe_path(@recipe)
-br
-= link_to "Delete", recipe_path(@recipe), method: :delete
+  br
+  - @recipe.ingredients.each do |ingredient|
+    | #{ingredient.amount} #{ingredient.name}
+    br
+  br
+  = @recipe.instructions
+  br
+  = image_tag @recipe.image_url
+  br
+  = link_to "Edit", edit_recipe_path(@recipe)
+  br
+  = link_to "Delete", recipe_path(@recipe), method: :delete
