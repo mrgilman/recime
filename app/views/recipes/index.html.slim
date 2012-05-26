@@ -1,7 +1,10 @@
 h3 My Recipes
 
-- @recipes.each do |recipe|
-  = link_to recipe.name, recipe_path(recipe)
+- if current_user
+  - current_user.recipes.each do |recipe|
+    = link_to recipe.name, recipe_path(recipe)
+- else
+  = link_to "Please log in to see your recipes", log_in_path
   br
 br
 br

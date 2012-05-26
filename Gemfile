@@ -8,6 +8,7 @@ gem 'nested_form', :git => 'https://github.com/ryanb/nested_form.git'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'bcrypt-ruby', :require => "bcrypt"
 
 
 # Gems used only for assets and not required
