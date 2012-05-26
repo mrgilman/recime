@@ -4,7 +4,7 @@ br
   - current_user.recipes.each do |recipe|
     = link_to recipe.name, recipe_path(recipe)
     br
-    br
+  br
   = link_to "Add a recipe", new_recipe_path
 - else
   | Please #{link_to "log in", log_in_path} to see your recipes.
