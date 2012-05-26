@@ -3,9 +3,9 @@ h3 My Recipes
 - if current_user
   - current_user.recipes.each do |recipe|
     = link_to recipe.name, recipe_path(recipe)
+    br
 - else
   = link_to "Please log in to see your recipes", log_in_path
-  br
 br
 br
 = link_to "Add a recipe", new_recipe_path

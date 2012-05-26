@@ -7,7 +7,6 @@ gem 'nested_form', :git => 'https://github.com/ryanb/nested_form.git'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 gem 'bcrypt-ruby', :require => "bcrypt"
 
 
@@ -28,6 +27,11 @@ gem 'jquery-rails'
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
 end
 
 # To use ActiveModel has_secure_password

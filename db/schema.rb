@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120526182432) do
+ActiveRecord::Schema.define(:version => 20120526191542) do
 
   create_table "ingredients", :force => true do |t|
     t.text     "name"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(:version => 20120526182432) do
     t.string   "password_salt"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+    t.string   "username"
   end
 
 end
