@@ -1,7 +1,13 @@
 div class='span6'
   h3
     = @recipe.name
-
+  | Prep time: #{@recipe.prep_time}
+  br
+  | Cook time: #{@recipe.cook_time}
+  br
+  | Servings: #{@recipe.servings}
+  br
+  br
   = @recipe.description
   br
   br
