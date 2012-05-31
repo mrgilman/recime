@@ -1,6 +1,8 @@
 Recime::Application.routes.draw do
 
-  match "/" => "recipes#index"
+  get "home/index"
+
+  match "/" => "home#index"
 
   get "sessions/new"
 
@@ -11,6 +13,7 @@ Recime::Application.routes.draw do
   root :to => "users#new"
   resources :users
   resources :sessions
+  resources :friendships
 
   get "ingredients/new"
 

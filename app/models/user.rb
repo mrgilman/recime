@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   attr_accessible :email, :username, :password, :password_confirmation
   attr_accessor :password
   has_many :recipes
+  has_many :friendships
   before_save :encrypt_password
 
   validates_confirmation_of :password

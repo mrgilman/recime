@@ -1,0 +1,9 @@
+h3
+  = @user.username
+br
+- @user.recipes.each do |recipe|
+  = link_to recipe.name, recipe_path(recipe)
+  br
+  br
+- if current_user != @user
+  = link_to "Follow #{@user.username}'s recipes", friendships_path({:id => @user.id}), :method => :post
