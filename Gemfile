@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.3'
+gem 'rails', '3.2.5'
 gem 'slim'
 gem 'nested_form', :git => 'https://github.com/ryanb/nested_form.git'
 
@@ -30,11 +30,11 @@ gem 'jquery-rails'
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'pg'
+  gem 'sqlite3'
 end
 
 group :production do
-  gem 'pg'
+  gem 'sqlite3'
 end
 
 # To use ActiveModel has_secure_password
